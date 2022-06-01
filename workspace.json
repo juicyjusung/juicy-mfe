@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "projects": {
+    "app1": "apps/app1",
+    "app1-e2e": "apps/app1-e2e",
+    "app1-feature1": "libs/app1/feature1",
+    "app1-main": "libs/app1/main",
+    "app2": "apps/app2",
+    "app2-e2e": "apps/app2-e2e",
+    "app2-main": "libs/app2/main",
+    "header": "apps/header",
+    "header-e2e": "apps/header-e2e",
+    "host": "apps/host",
+    "host-e2e": "apps/host-e2e",
+    "shared-components": "libs/shared/components",
+    "shared-utils": "libs/shared/utils"
+  }
+}

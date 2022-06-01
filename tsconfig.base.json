@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@juicy-module-federation/app1/feature1": [
+        "libs/app1/feature1/src/index.ts"
+      ],
+      "@juicy-module-federation/app1/main": ["libs/app1/main/src/index.ts"],
+      "@juicy-module-federation/app2/main": ["libs/app2/main/src/index.ts"],
+      "@juicy-module-federation/shared/components": [
+        "libs/shared/components/src/index.ts"
+      ],
+      "@juicy-module-federation/shared/utils": [
+        "libs/shared/utils/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
