@@ -64,6 +64,13 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+![image](https://user-images.githubusercontent.com/46892438/171468510-0f52ee2e-6b2f-43f2-a100-dca4de41ef41.png)
+![image](https://user-images.githubusercontent.com/46892438/171468752-4019617f-ccaa-4edd-a891-b07136438538.png)
+![image](https://user-images.githubusercontent.com/46892438/171468778-d19a22f3-1afc-433c-bb86-da5a41b5ab48.png)
+
+
+
+
 
 Micro Frontend
 
@@ -113,6 +120,7 @@ nx의 플러그인을 활용하여 빠르게 Module Federation MFE를 구현하�
 ### Prerequisites
 
 > pnpm
+> 
 > workspace.json에서 프로젝트 네임 확인
 
 ### Installation
@@ -260,13 +268,9 @@ See the [open issues](https://github.com/juicyjusung/juicy-mfe/issues) for a ful
 <!-- CONTACT -->
 ## Contact
 
-juicyjusung - [@twitter_handle](https://twitter.com/twitter_handle) - juicyjusung@gmail.com
+juicyjusung - juicyjusung@gmail.com
 
 Project Link: [https://github.com/juicyjusung/juicy-mfe](https://github.com/juicyjusung/juicy-mfe)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
