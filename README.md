@@ -89,6 +89,9 @@ Micro Frontend
 
 ![graph](./readme-asset/img.png)
 
+MFE(Micro Frontend)를 구현하는 방법은 다양 합니다 (빌드타임 통합, iframe, 웹뷰 등).  본 프로젝트는 그 중 런타임에 애플리케이션(번들)들이 통합 될 수 있는 webpack5의 module federation을 이용합니다.
+nx의 플러그인을 활용하여 빠르게 Module Federation MFE를 구현하는 예제 입니다.
+
 - [Host]
   - host - (port: 4200)
 
@@ -101,35 +104,16 @@ Micro Frontend
   - shared/components
   - shared/utils
 
+- Host, Remotes 앱은 각각 독립적으로 실행이 가능하며 런타임에 통합될 수 있습니다.
+  - 즉, 수정 사항이 발생한 앱만 빌드 및 배포 하여도 해당 앱을 사용하는 Host 앱들은 빌드, 배포가 필요하지 않습니다.
+- 공통으로 사용되는 라이브러리들은 빌드 타임에 통합합니다.
 
 
-
-```bash
- .
-├──  apps
-│   ├──  app1
-│   ├──  app1-e2e
-│   ├──  app2
-│   ├──  app2-e2e
-│   ├──  header
-│   ├──  header-e2e
-│   ├──  host
-│   └──  host-e2e
-└──  libs
-    ├──  app1
-    │   ├──  feature1
-    │   └──  main
-    ├──  app2
-    │   └──  main
-    └──  shared
-        ├──  components
-        └──  utils
-
-```
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+> pnpm
+> workspace.json에서 프로젝트 네임 확인
 
 ### Installation
 
@@ -221,19 +205,19 @@ nx g @nrwl/react:remote shop --host=host
 ```bash
 nx g lib [라이브러리 명]
 
-pnpm nx g @nrwl/react:library shared/ui
+// ex) 리액트 라이브러리 추가
+nx g @nrwl/react:library shared/ui
 ```
 
 라이브러리 삭제
 
 ```bash
-worksapce.json에서 프로젝트 네임 확인
-nx g remove **[라이브러리 명]**
+nx g remove [라이브러리 명]
 
-nx g remove **[라이브러리 명] --forceRemove**
+nx g remove [라이브러리 명] --forceRemove
 
+// ex
 nx g remove shared-ui
-pnpm nx g remove shared-ui
 ```
 
 
@@ -248,6 +232,14 @@ nx run-many --target=build --all
 nx graph
 ```
 
+### CI
+
+코드 수정에 따라 영향을 받는 프로젝트만 lint, test, build, e2e 를 진행합니다.
+
+- nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.2
+- nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.2
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -257,6 +249,7 @@ nx graph
 
 - [ ] 스토리북 추가
 - [ ] 다른 프레임웤/라이브러리(Vue, Angular 등) 추가
+- [ ] deploy
 
 See the [open issues](https://github.com/juicyjusung/juicy-mfe/issues) for a full list of proposed features (and known issues).
 
@@ -274,13 +267,6 @@ Project Link: [https://github.com/juicyjusung/juicy-mfe](https://github.com/juic
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
