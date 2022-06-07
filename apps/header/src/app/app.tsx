@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { JButton } from '@juicy-module-federation/shared/components';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   label?: string;
@@ -21,11 +22,11 @@ interface Props {
 
 export function App({ auth, label = '' }: Props) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const navigate = useNavigate();
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -43,17 +44,33 @@ export function App({ auth, label = '' }: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <JButton color="secondary" href="/">
+          <JButton
+            color="secondary"
+            onClick={() => {
+              navigate('/');
+            }}
+          >
             Home
           </JButton>
           <Typography variant="subtitle1" sx={{ ml: 4 }}>
             header
           </Typography>
           <Stack gap={3} direction="row" sx={{ ml: 'auto' }}>
-            <JButton color="secondary" href="/app1">
+            <JButton
+              color="secondary"
+              href="/app1"
+              onClick={() => {
+                navigate('/app1');
+              }}
+            >
               app1
             </JButton>
-            <JButton color="secondary" href="/app2">
+            <JButton
+              color="secondary"
+              onClick={() => {
+                navigate('/app2');
+              }}
+            >
               app2
             </JButton>
           </Stack>
