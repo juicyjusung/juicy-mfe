@@ -21,8 +21,8 @@ module.exports = withModuleFederation({
    * ]
    */
   remotes: [
-    ['app1', '//localhost:4201/'],
-    ['app2', '//localhost:4202/'],
-    ['header', '//localhost:4203/'],
+    ['app1', '//juicy-mfe-app1.vercel.app/'],
+    ['app2', '//juicy-mfe-app2.vercel.app/'],
+    ['header', '//juicy-mfe.vercel.app/'],
   ],
 });
