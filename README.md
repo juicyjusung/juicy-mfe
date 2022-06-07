@@ -24,14 +24,13 @@
     <a href="https://github.com/juicyjusung/juicy-mfe"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/juicyjusung/juicy-mfe">View Demo</a>
+    <a href="https://juicy-mfe-lemon.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/juicyjusung/juicy-mfe/issues">Report Bug</a>
     ·
     <a href="https://github.com/juicyjusung/juicy-mfe/issues">Request Feature</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
