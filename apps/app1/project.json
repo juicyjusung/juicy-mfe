@@ -1,9 +1,11 @@
 {
+  "name": "app1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/app1/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/web:webpack",
+      "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -70,7 +72,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/app1"],
+      "outputs": ["{workspaceRoot}/coverage/apps/app1"],
       "options": {
         "jestConfig": "apps/app1/jest.config.ts",
         "passWithNoTests": true

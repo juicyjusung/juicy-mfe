@@ -1,4 +1,6 @@
 {
+  "name": "app2-main",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/app2/main/src",
   "projectType": "library",
   "tags": [],
@@ -12,7 +14,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/app2/main"],
+      "outputs": ["{workspaceRoot}/coverage/libs/app2/main"],
       "options": {
         "jestConfig": "libs/app2/main/jest.config.ts",
         "passWithNoTests": true

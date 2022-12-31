@@ -14,5 +14,6 @@
     "host-e2e": "apps/host-e2e",
     "shared-components": "libs/shared/components",
     "shared-utils": "libs/shared/utils"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
